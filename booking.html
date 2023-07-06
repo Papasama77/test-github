@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de voyage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Raleway:wght@800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Début Topbar -->
+<section id="topbar">
+        <div class="container">
+            <div class="row pt-3">
+                <div class="col-md-8 coordonnees">
+                    <ul class="d-flex justify-content-around hidden">
+                        <li><i class="bi bi-telephone-fill"></i></i> 01 23 45 67 89</li>
+                        <li><i class="bi bi-envelope-fill"></i> contact@voyage.com</li>
+                        <li><i class="bi bi-geo-alt-fill"></i> 34 rue de la république 75000 Paris</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 d-flex justify-content-between justify-content-lg-end">
+                    <!-- liste pour les reseaux sociaux + un bouton pour la recherche-->
+                    <div class="social">
+                        <ul class="d-flex">
+                            <li><i class="bi bi-facebook"></i></li>
+                            <li><i class="bi bi-twitter"></i></li>
+                            <li><i class="bi bi-instagram"></i></li>
+                            <li><i class="bi bi-linkedin"></i></li>
+
+                        </ul>
+                    </div>
+
+                    <div class="search-icon">
+                        <button><i class="bi bi-search"></i></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- Fin Topbar-->
+</section>
+
+<header>
+        <div class="container">
+            <div class="row mt-3">
+                <nav class="navbar navbar-expand-lg col-md-10 offset-md-1">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <h3>VOYAGE</h3>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#populaires">Destinations</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Blog</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <a href="#" class="btn btn-danger">Je Réserve ! </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+</header>
+
+<section id="page-titre" class="overlay">
+
+    <h1>Réservations</h1>
+    <div class="vague"></div>
+</section>
+
+<main class="container">
+    <div class="row">
+        <section class="col-7 offset-md-1 booking">
+            <h3 class="mt-5">Vos informations</h3>
+            
+            <form action="validation-article.php" method="POST">
+                <div class="d-flex">
+                    <div class="col-6">
+                        <label for="nom" class="form-label">Nom*</label>
+                        <input type="text" name="nom" class="form-control my-1">
+                    </div>
+                    <div class="col-6">
+                        <label for="prenom" class="form-label">Prénom*</label>
+                        <input type="text" name="prenom" class="form-control my-1">
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-6">
+                        <label for="email" class="form-label">Email*</label>
+                        <input type="email" name="email" class="form-control my-1">
+                    </div>
+                    <div class="col-6">
+                        <label for="email" class="form-label">Confirmer votre Email*</label>
+                        <input type="email" name="email" class="form-control my-1">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="phone" class="form-label">Téléphone*</label>
+                    <input type="mobile" name="telephone" class="form-control my-1">
+                </div>
+            </form>
+            
+            <h3 class="mt-5">information de paiement</h3>
+
+            <form action="validation-article.php" method="POST">
+
+                <div class="col">
+                    <label for="nom" class="form-label">Nom sur la carte*</label>
+                    <input type="text" name="nom de carte" class="form-control my-1">
+                </div>
+                <div class="d-flex">
+                <div class="col-6">
+                    <label for="numero" class="form-label">Numéro de carte*</label>
+                    <input type="int" name="numero de carte" class="form-control my-1">
+                </div>
+                    <img src="images/cards.png" class="img-fluid">
+                </div>
+                <div class="d-flex">
+                    <div class="col-3">
+                        <label for="date" class="form-label">Date d'expiration*</label>
+                        <input type="text" name="mois" placeholder="MM" class="form-control my-1">
+                    </div>
+                    <div class="col-3">
+                        <input type="text" name="annee" placeholder="Year" class="form-control">
+                    </div>
+                    <div class="col-2">
+                        <label for="text" class="form-label">Code de sécurité*</label>
+                        <input type="text" name="CCV" placeholder="CCV" class="form-control my-1">
+                        <img src="images/icon_ccv.gif">
+                    </div>
+            </form>
+
+
+        </section>
+
+        <aside class="col-3">
+
+        </aside>
+
+</main>
+
+
+</html>
